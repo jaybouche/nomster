@@ -27,3 +27,63 @@ body {
   font-family: 'milkshakeregular';
   font-size: 28px;
 }
+.pagination {
+  background: image_url('ds.png');
+  box-shadow: 0px 1px 3px #2a2a2a;
+  cursor: default;
+  /* self-clearing method: */ }
+  .pagination a, .pagination span, .pagination em {
+    padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px; }
+  .pagination .disabled {
+    display: none; }
+  .pagination .current {
+    font-family: 'milkshakeregular';
+    font-size: 14px;
+    color: none;
+    border: none; }
+  .pagination a {
+    text-decoration: none;
+    color: #23ead9;
+    border: 1px solid #9aafe5; }
+    .pagination a:hover, .pagination a:focus {
+      color: #23ead9;
+      border-color: #9aafe5; }
+  .pagination .pagination_links {
+    margin: 0 auto;
+    width: 0.5% ;
+    color: none;
+    border: 1px soild #9aafe5;
+    text-align:center;
+  }
+  .pagination .page_info {
+    background: #2e6ab1;
+    color: none;
+    padding: 0.4em 0.6em;
+    width: 22em;
+    margin-bottom: 0.3em;
+    text-align: center; }
+    .pagination .page_info b {
+      color: #330000;
+      background: #6aa6ed;
+      padding: 0.1em 0.25em; }
+  .pagination:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  * html .pagination {
+    height: 1%; }
+  *:first-child + html .pagination {
+    overflow: hidden; }
+    .pages {
+      top-margin: 90% ;
+      background: none;
+      font-family: 'milkshakeregular';
+      font-size: 12px;
+      float: left;
+      margin-right: 1px;
+    }
