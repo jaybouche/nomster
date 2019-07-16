@@ -1,5 +1,6 @@
 class PlacesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :edit]
+end
   def index
     @places = Place.all.page(params[ :page]).per_page(2)
   end
@@ -15,7 +16,6 @@ class PlacesController < ApplicationController
   end
   def edit
     @place = Place.find(params[:id])
-  end
   def update
     @place = Place.find(params[:id])
     @place.update_attributes(place_params)
@@ -26,6 +26,7 @@ class PlacesController < ApplicationController
     @place.destroy
     redirect_to root_path
   end
+  
   private
 
   def place_params
